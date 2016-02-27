@@ -12,17 +12,28 @@
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    PdAudioController *pd_;
+}
 
+@synthesize pd = pd_;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    pd_ = [[PdAudioController alloc] init];
+    PdAudioStatus status = [pd_ configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
+    if (status == PdAudioOK) {
+        NSLog(@"Configured PdAudioController instance.");
+    } else {
+        NSLog(@"Failed to configure PdAudioController instance.");
+    }
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    pd_.active = NO;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -36,6 +47,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    pd_.active = YES;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

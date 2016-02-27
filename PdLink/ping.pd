@@ -1,0 +1,18 @@
+#N canvas 550 408 450 300 10;
+#X obj 138 112 osc~ 440;
+#X obj 138 134 *~;
+#X obj 138 156 *~ 0.1;
+#X obj 138 178 dac~;
+#X obj 222 113 vline~;
+#X obj 222 71 bng 15 250 50 0 empty ping empty 17 7 0 10 -262144 -1
+-1;
+#X msg 222 90 1 \, 0 500;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 1 1;
+#X connect 5 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 6 0 4 0;

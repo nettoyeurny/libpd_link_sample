@@ -26,8 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     patch_ = [PdFile openFileNamed:@"ping.pd" path:[[NSBundle mainBundle] resourcePath]];
-    ABLLinkRef linkRef = [((AppDelegate*)[[UIApplication sharedApplication] delegate]).pd.audioUnit getLinkRef];
-    linkSettings_ = [ABLLinkSettingsViewController instance:linkRef];
+    linkSettings_ = [ABLLinkSettingsViewController instance:[PdAudioUnit getLinkRef]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +36,6 @@
 
 -(IBAction)triggerSound:(id)sender {
     [PdBase sendBangToReceiver:@"ping"];
-    NSLog(@"Ping!");
 }
 
 -(IBAction)showLinkSettings:(id)sender

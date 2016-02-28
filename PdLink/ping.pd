@@ -8,7 +8,7 @@
 -1;
 #X msg 222 90 1 \, 0 500;
 #X obj 221 69 abl_link~;
-#X msg 221 48 tempo 90;
+#X msg 221 48 beat 0;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;

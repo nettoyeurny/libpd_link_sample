@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "PdBase.h"
 #import "PdFile.h"
+#import "PdDispatcher.h"
 #include "ABLLinkSettingsViewController.h"
 #include "ABLLink.h"
 
@@ -18,6 +19,7 @@
 @end
 
 @implementation ViewController {
+    PdDispatcher *dispatcher_;
     PdFile *patch_;
     UIViewController *linkSettings_;
 }
@@ -25,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    dispatcher_ = [[PdDispatcher alloc] init];
+    [PdBase setDelegate:dispatcher_];
     patch_ = [PdFile openFileNamed:@"ping.pd" path:[[NSBundle mainBundle] resourcePath]];
     linkSettings_ = [ABLLinkSettingsViewController instance:[PdAudioUnit getLinkRef]];
 }

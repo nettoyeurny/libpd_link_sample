@@ -24,19 +24,31 @@
                                     <action selector="showLinkSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcv-cT-sgT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcd-Bg-BPs">
-                                <rect key="frame" x="285" y="263" width="31" height="30"/>
-                                <state key="normal" title="Ping"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="20" maxValue="240" translatesAutoresizingMaskIntoConstraints="NO" id="4jK-2V-Ung">
+                                <rect key="frame" x="120" y="136" width="360" height="31"/>
                                 <connections>
-                                    <action selector="triggerSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJ6-Z9-bqn"/>
+                                    <action selector="tempoChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mG7-Ov-sgo"/>
                                 </connections>
-                            </button>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vdy-xN-fEO">
+                                <rect key="frame" x="120" y="204" width="360" height="31"/>
+                                <connections>
+                                    <action selector="resolutionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uLH-ha-0rY"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-wY-LDV">
+                                <rect key="frame" x="120" y="285" width="360" height="31"/>
+                                <connections>
+                                    <action selector="quantumChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TN4-xD-wiL"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="218" y="212"/>
         </scene>
     </scenes>
 </document>

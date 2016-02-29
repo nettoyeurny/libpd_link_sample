@@ -38,8 +38,25 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)triggerSound:(id)sender {
-    [PdBase sendBangToReceiver:@"ping"];
+-(IBAction)tempoChanged:(id)sender {
+    UISlider *slider = (UISlider*) sender;
+    float tempo = slider.value;
+    NSLog(@"tempo: %f", tempo);
+    [PdBase sendFloat:tempo toReceiver:@"tempo"];
+}
+
+-(IBAction)resolutionChanged:(id)sender {
+    UISlider *slider = (UISlider*) sender;
+    int res = slider.value;
+    NSLog(@"resolution: %d", res);
+    [PdBase sendFloat:(int)res toReceiver:@"resolution"];
+}
+
+-(IBAction)quantumChanged:(id)sender {
+    UISlider *slider = (UISlider*) sender;
+    int quantum = slider.value;
+    NSLog(@"quantum: %d", quantum);
+    [PdBase sendFloat:quantum toReceiver:@"quantum"];
 }
 
 -(IBAction)showLinkSettings:(id)sender

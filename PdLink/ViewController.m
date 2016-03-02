@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "PdAudioUnit.h"
 #import "PdBase.h"
 #import "PdFile.h"
 #import "PdDispatcher.h"
@@ -36,7 +37,8 @@ void sessionTempoCallback(double tempo, void *context) {
     [PdBase setDelegate:dispatcher_];
     patch_ = [PdFile openFileNamed:@"ping.pd" path:[[NSBundle mainBundle] resourcePath]];
     linkSettings_ = [ABLLinkSettingsViewController instance:[PdAudioUnit getLinkRef]];
-    ABLLinkSetSessionTempoCallback([PdAudioUnit getLinkRef], sessionTempoCallback, (__bridge void *)(self));
+    ABLLinkSetSessionTempoCallback([PdAudioUnit getLinkRef], sessionTempoCallback,
+                                   (__bridge void *)(self));
 }
 
 - (void)didReceiveMemoryWarning {

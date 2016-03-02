@@ -17,34 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58y-3V-cYd">
+                                <rect key="frame" x="20" y="84" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resolution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDI-JT-j7F">
+                                <rect key="frame" x="20" y="183" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ok-Bc-SDf">
+                                <rect key="frame" x="20" y="289" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="20" maxValue="240" translatesAutoresizingMaskIntoConstraints="NO" id="eK0-65-Sz7">
+                                <rect key="frame" x="18" y="113" width="286" height="31"/>
+                                <connections>
+                                    <action selector="tempoChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rNK-WH-Scp"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="YP3-Xy-SaD">
+                                <rect key="frame" x="18" y="212" width="286" height="31"/>
+                                <connections>
+                                    <action selector="resolutionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cp1-to-dhS"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-uK-g19">
+                                <rect key="frame" x="18" y="310" width="286" height="31"/>
+                                <connections>
+                                    <action selector="quantumChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="h68-dE-Lgx"/>
+                                </connections>
+                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY8-tG-OrM">
-                                <rect key="frame" x="285" y="550" width="30" height="30"/>
+                                <rect key="frame" x="20" y="459" width="30" height="30"/>
                                 <state key="normal" title="Link"/>
                                 <connections>
                                     <action selector="showLinkSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcv-cT-sgT"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="20" maxValue="240" translatesAutoresizingMaskIntoConstraints="NO" id="4jK-2V-Ung">
-                                <rect key="frame" x="120" y="136" width="360" height="31"/>
-                                <connections>
-                                    <action selector="tempoChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mG7-Ov-sgo"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vdy-xN-fEO">
-                                <rect key="frame" x="120" y="204" width="360" height="31"/>
-                                <connections>
-                                    <action selector="resolutionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uLH-ha-0rY"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-wY-LDV">
-                                <rect key="frame" x="120" y="285" width="360" height="31"/>
-                                <connections>
-                                    <action selector="quantumChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TN4-xD-wiL"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="quantumLabel" destination="8ok-Bc-SDf" id="6H0-r6-8Ry"/>
+                        <outlet property="quantumSlider" destination="HNj-uK-g19" id="Bht-TK-461"/>
+                        <outlet property="resolutionLabel" destination="SDI-JT-j7F" id="yAY-9D-jhU"/>
+                        <outlet property="resolutionSlider" destination="YP3-Xy-SaD" id="mYa-BH-Xgk"/>
+                        <outlet property="tempoLabel" destination="58y-3V-cYd" id="hgZ-2O-IrB"/>
+                        <outlet property="tempoSlider" destination="eK0-65-Sz7" id="RCP-v9-5Rq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

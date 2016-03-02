@@ -37,25 +37,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
--(IBAction)tempoChanged:(id)sender {
+- (IBAction)tempoChanged:(id)sender {
     UISlider *slider = (UISlider*) sender;
-    float tempo = slider.value;
-    NSLog(@"tempo: %f", tempo);
+    int tempo = slider.value;
+    self.tempoLabel.text = [NSString stringWithFormat:@"Tempo: %d", tempo];
     [PdBase sendFloat:tempo toReceiver:@"tempo"];
 }
-
--(IBAction)resolutionChanged:(id)sender {
+- (IBAction)resolutionChanged:(id)sender {
     UISlider *slider = (UISlider*) sender;
     int res = slider.value;
-    NSLog(@"resolution: %d", res);
+    self.resolutionLabel.text = [NSString stringWithFormat:@"Resolution: %d", res];
     [PdBase sendFloat:(int)res toReceiver:@"resolution"];
 }
-
--(IBAction)quantumChanged:(id)sender {
+- (IBAction)quantumChanged:(id)sender {
     UISlider *slider = (UISlider*) sender;
     int quantum = slider.value;
-    NSLog(@"quantum: %d", quantum);
+    self.quantumLabel.text = [NSString stringWithFormat:@"Quantum: %d", quantum];
     [PdBase sendFloat:quantum toReceiver:@"quantum"];
 }
 

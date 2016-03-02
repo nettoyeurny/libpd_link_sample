@@ -15,13 +15,18 @@
 #include "ABLLink.h"
 
 @interface ViewController ()
-
+- (void)updateTempo:(int)tempo;
 @end
 
 @implementation ViewController {
     PdDispatcher *dispatcher_;
     PdFile *patch_;
     UIViewController *linkSettings_;
+}
+
+void sessionTempoCallback(double tempo, void *context) {
+    ViewController *vc = (__bridge ViewController*) context;
+    [vc updateTempo:tempo];
 }
 
 - (void)viewDidLoad {
@@ -31,6 +36,7 @@
     [PdBase setDelegate:dispatcher_];
     patch_ = [PdFile openFileNamed:@"ping.pd" path:[[NSBundle mainBundle] resourcePath]];
     linkSettings_ = [ABLLinkSettingsViewController instance:[PdAudioUnit getLinkRef]];
+    ABLLinkSetSessionTempoCallback([PdAudioUnit getLinkRef], sessionTempoCallback, (__bridge void *)(self));
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +47,7 @@
 - (IBAction)tempoChanged:(id)sender {
     UISlider *slider = (UISlider*) sender;
     int tempo = slider.value;
-    self.tempoLabel.text = [NSString stringWithFormat:@"Tempo: %d", tempo];
+    [self updateTempo:tempo];
     [PdBase sendFloat:tempo toReceiver:@"tempo"];
 }
 
@@ -89,4 +95,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)updateTempo:(int)tempo {
+    self.tempoLabel.text = [NSString stringWithFormat:@"Tempo: %d", tempo];
+}
+
 @end
+

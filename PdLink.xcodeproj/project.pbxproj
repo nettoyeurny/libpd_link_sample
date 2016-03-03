@@ -14,35 +14,9 @@
 		58C964511C80DD710031C7FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C9644F1C80DD710031C7FA /* Main.storyboard */; };
 		58C964531C80DD710031C7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C964521C80DD710031C7FA /* Assets.xcassets */; };
 		58C964561C80DD710031C7FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C964541C80DD710031C7FA /* LaunchScreen.storyboard */; };
-		58C964681C80DEEA0031C7FA /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C964631C80DD9A0031C7FA /* libpd-ios.a */; };
 		58C9646B1C80DEEA0031C7FA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C964691C80DEEA0031C7FA /* AudioToolbox.framework */; };
 		58C9646C1C80DEEA0031C7FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C9646A1C80DEEA0031C7FA /* AVFoundation.framework */; };
-		58C9646E1C80E2CB0031C7FA /* libABLLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C9646D1C80E2CB0031C7FA /* libABLLink.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		58C964621C80DD9A0031C7FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 58C9645D1C80DD9A0031C7FA /* libpd.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = "libpd-ios";
-		};
-		58C964641C80DD9A0031C7FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 58C9645D1C80DD9A0031C7FA /* libpd.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 119013AB1486450C00086F19;
-			remoteInfo = "libpd-osx";
-		};
-		58C964661C80DEAA0031C7FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 58C9645D1C80DD9A0031C7FA /* libpd.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "libpd-ios";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		58A3EBFA1C80E9EE0083ACCF /* ping.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ping.pd; sourceTree = "<group>"; };
@@ -56,10 +30,8 @@
 		58C964521C80DD710031C7FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58C964551C80DD710031C7FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58C964571C80DD710031C7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58C9645D1C80DD9A0031C7FA /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		58C964691C80DEEA0031C7FA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		58C9646A1C80DEEA0031C7FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		58C9646D1C80E2CB0031C7FA /* libABLLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libABLLink.a; path = ../../LinkKit/lib/libABLLink.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58C9646E1C80E2CB0031C7FA /* libABLLink.a in Frameworks */,
 				58C9646B1C80DEEA0031C7FA /* AudioToolbox.framework in Frameworks */,
 				58C9646C1C80DEEA0031C7FA /* AVFoundation.framework in Frameworks */,
-				58C964681C80DEEA0031C7FA /* libpd-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,10 +50,8 @@
 		58C9643A1C80DD710031C7FA = {
 			isa = PBXGroup;
 			children = (
-				58C9646D1C80E2CB0031C7FA /* libABLLink.a */,
 				58C964691C80DEEA0031C7FA /* AudioToolbox.framework */,
 				58C9646A1C80DEEA0031C7FA /* AVFoundation.framework */,
-				58C9645D1C80DD9A0031C7FA /* libpd.xcodeproj */,
 				58C964451C80DD710031C7FA /* PdLink */,
 				58C964441C80DD710031C7FA /* Products */,
 			);
@@ -122,15 +90,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		58C9645E1C80DD9A0031C7FA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				58C964631C80DD9A0031C7FA /* libpd-ios.a */,
-				58C964651C80DD9A0031C7FA /* libpd-osx.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,7 +104,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				58C964671C80DEAA0031C7FA /* PBXTargetDependency */,
 			);
 			name = PdLink;
 			productName = PdLink;
@@ -177,35 +135,12 @@
 			mainGroup = 58C9643A1C80DD710031C7FA;
 			productRefGroup = 58C964441C80DD710031C7FA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 58C9645E1C80DD9A0031C7FA /* Products */;
-					ProjectRef = 58C9645D1C80DD9A0031C7FA /* libpd.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				58C964421C80DD710031C7FA /* PdLink */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		58C964631C80DD9A0031C7FA /* libpd-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpd-ios.a";
-			remoteRef = 58C964621C80DD9A0031C7FA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		58C964651C80DD9A0031C7FA /* libpd-osx.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpd-osx.a";
-			remoteRef = 58C964641C80DD9A0031C7FA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		58C964411C80DD710031C7FA /* Resources */ = {
@@ -233,14 +168,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		58C964671C80DEAA0031C7FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "libpd-ios";
-			targetProxy = 58C964661C80DEAA0031C7FA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		58C9644F1C80DD710031C7FA /* Main.storyboard */ = {
@@ -345,6 +272,7 @@
 		58C9645B1C80DD710031C7FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PdLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -354,13 +282,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.noisepages.nettoyeur.PdLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../pd-for-ios/libpd/** ../../LinkKit/include";
+				USER_HEADER_SEARCH_PATHS = "../../libpd/** ../../LinkKit/include";
 			};
 			name = Debug;
 		};
 		58C9645C1C80DD710031C7FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PdLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -370,7 +299,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.noisepages.nettoyeur.PdLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../pd-for-ios/libpd/** ../../LinkKit/include";
+				USER_HEADER_SEARCH_PATHS = "../../libpd/** ../../LinkKit/include";
 			};
 			name = Release;
 		};

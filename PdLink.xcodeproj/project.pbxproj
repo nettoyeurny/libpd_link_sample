@@ -351,11 +351,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",
-					"-L/Users/brinkmann/Documents/link2/LinkKit/lib",
+					"-L../LinkKit/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.noisepages.nettoyeur.PdLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/brinkmann/Documents/link2/libpd_link_sample/libpd/** /Users/brinkmann/Documents/link2/LinkKit/include";
+				USER_HEADER_SEARCH_PATHS = "libpd/** ../LinkKit/include";
 			};
 			name = Debug;
 		};
@@ -368,11 +368,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lc++",
-					"-L/Users/brinkmann/Documents/link2/LinkKit/lib",
+					"-L../LinkKit/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.noisepages.nettoyeur.PdLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/brinkmann/Documents/link2/libpd_link_sample/libpd/** /Users/brinkmann/Documents/link2/LinkKit/include";
+				USER_HEADER_SEARCH_PATHS = "libpd/** ../LinkKit/include";
 			};
 			name = Release;
 		};

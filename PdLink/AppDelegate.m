@@ -14,12 +14,15 @@
 
 @implementation AppDelegate {
     PdAudioController *pd_;
+    ABLLinkRef linkRef_;
 }
 
 @synthesize pd = pd_;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    linkRef_ = ABLLinkNew(120, 4);
+    [PdAudioUnit setLinkRef:linkRef_];
     pd_ = [[PdAudioController alloc] init];
     PdAudioStatus status = [pd_ configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
     if (status == PdAudioOK) {
@@ -52,6 +55,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    ABLLinkDelete(linkRef_);
+}
+
+- (ABLLinkRef)getLinkRef {
+    return linkRef_;
 }
 
 @end

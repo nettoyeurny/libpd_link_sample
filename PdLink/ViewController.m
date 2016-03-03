@@ -36,9 +36,10 @@ void sessionTempoCallback(double tempo, void *context) {
     dispatcher_ = [[PdDispatcher alloc] init];
     [PdBase setDelegate:dispatcher_];
     patch_ = [PdFile openFileNamed:@"ping.pd" path:[[NSBundle mainBundle] resourcePath]];
-    linkSettings_ = [ABLLinkSettingsViewController instance:[PdAudioUnit getLinkRef]];
-    ABLLinkSetSessionTempoCallback([PdAudioUnit getLinkRef], sessionTempoCallback,
-                                   (__bridge void *)(self));
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    ABLLinkRef linkRef = [appDelegate getLinkRef];
+    linkSettings_ = [ABLLinkSettingsViewController instance:linkRef];
+    ABLLinkSetSessionTempoCallback(linkRef, sessionTempoCallback, (__bridge void *)(self));
 }
 
 - (void)didReceiveMemoryWarning {

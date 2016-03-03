@@ -40,6 +40,7 @@ void sessionTempoCallback(double tempo, void *context) {
     ABLLinkRef linkRef = [appDelegate getLinkRef];
     linkSettings_ = [ABLLinkSettingsViewController instance:linkRef];
     ABLLinkSetSessionTempoCallback(linkRef, sessionTempoCallback, (__bridge void *)(self));
+    [self updateTempo:ABLLinkGetSessionTempo(linkRef)];
 }
 
 - (void)didReceiveMemoryWarning {

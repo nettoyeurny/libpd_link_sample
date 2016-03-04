@@ -54,7 +54,7 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY8-tG-OrM">
-                                <rect key="frame" x="20" y="459" width="30" height="30"/>
+                                <rect key="frame" x="20" y="402" width="30" height="30"/>
                                 <state key="normal" title="Link"/>
                                 <connections>
                                     <action selector="showLinkSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcv-cT-sgT"/>

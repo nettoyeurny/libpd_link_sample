@@ -1,9 +1,11 @@
-libpd
+Sample app using Link and libpd
 =====
+
+Quick start: In the parent directory of your LinkKit directory (i.e., /some_path/LinkKit/..), say
 
     git clone --recursive git@github.com:nettoyeurny/libpd_link_sample.git
 
-Open PdLink.xcodeproj in Xcode. If the libpd_link_sample directory is in the same directory as the LinkKit directory, the sample app should just work. Otherwise you'll need to adjust a few paths in the project settings.
+Open libpd_link_sample/PdLink.xcodeproj in Xcode. You should be able to run the sample app without having to make any changes.
 
-The directory libpd/abstractions contains an abstraction, abl_link~.pd, that mimics the behavior of the Link external, as well as a help patch that explains how to use it.
+The directory libpd_link_sample/libpd/abstractions contains an abstraction, abl_link~.pd, that mimics the behavior of the Link external, as well as a help patch that explains how to use it.
 

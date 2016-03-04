@@ -1,4 +1,4 @@
-Sample app using Link and libpd
+Link and libpd --- quick and dirty sample app
 =====
 
 Quick start: In the parent directory of your LinkKit directory (i.e., /some_path/LinkKit/..), say

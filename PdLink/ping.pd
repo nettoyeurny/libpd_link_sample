@@ -21,6 +21,10 @@
 #X obj 151 299 f 440;
 #X obj 186 251 f 440;
 #X obj 186 122 abl_link~ 1 0 4 140;
+#X obj 252 311 loadbang;
+#X obj 252 355 print props_quantum;
+#X obj 252 333 abl_link_props;
+#X obj 251 377 print props_tempo;
 #X connect 0 0 1 1;
 #X connect 1 0 9 0;
 #X connect 3 0 1 0;
@@ -49,3 +53,6 @@
 #X connect 21 1 18 0;
 #X connect 21 2 6 1;
 #X connect 21 3 5 1;
+#X connect 22 0 24 0;
+#X connect 24 0 23 0;
+#X connect 24 1 25 0;

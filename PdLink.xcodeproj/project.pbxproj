@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58A04E781C989DDE00FDD5CB /* PdLinkAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A04E771C989DDE00FDD5CB /* PdLinkAudioUnit.m */; };
 		58A3EBFB1C80E9EE0083ACCF /* ping.pd in Resources */ = {isa = PBXBuildFile; fileRef = 58A3EBFA1C80E9EE0083ACCF /* ping.pd */; };
 		58C964481C80DD710031C7FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C964471C80DD710031C7FA /* main.m */; };
 		58C9644B1C80DD710031C7FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C9644A1C80DD710031C7FA /* AppDelegate.m */; };
@@ -46,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		58A04E761C989DDE00FDD5CB /* PdLinkAudioUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PdLinkAudioUnit.h; path = pd_link_bridge/ios/PdLinkAudioUnit.h; sourceTree = SOURCE_ROOT; };
-		58A04E771C989DDE00FDD5CB /* PdLinkAudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PdLinkAudioUnit.m; path = pd_link_bridge/ios/PdLinkAudioUnit.m; sourceTree = SOURCE_ROOT; };
 		58A3EBFA1C80E9EE0083ACCF /* ping.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ping.pd; sourceTree = "<group>"; };
 		58C964431C80DD710031C7FA /* PdLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PdLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C964471C80DD710031C7FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,8 +100,6 @@
 		58C964451C80DD710031C7FA /* PdLink */ = {
 			isa = PBXGroup;
 			children = (
-				58A04E761C989DDE00FDD5CB /* PdLinkAudioUnit.h */,
-				58A04E771C989DDE00FDD5CB /* PdLinkAudioUnit.m */,
 				58C964491C80DD710031C7FA /* AppDelegate.h */,
 				58C9644A1C80DD710031C7FA /* AppDelegate.m */,
 				58C9644C1C80DD710031C7FA /* ViewController.h */,
@@ -231,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58A04E781C989DDE00FDD5CB /* PdLinkAudioUnit.m in Sources */,
 				58C9644E1C80DD710031C7FA /* ViewController.m in Sources */,
 				58C9644B1C80DD710031C7FA /* AppDelegate.m in Sources */,
 				58C964481C80DD710031C7FA /* main.m in Sources */,

@@ -24,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     linkRef_ = ABLLinkNew(120, 4);
-    pd_au_ = [PdLinkAudioUnit initWithLinkRef:linkRef_];
+    pd_au_ = [[PdLinkAudioUnit alloc] initWithLinkRef:linkRef_];
     pd_ = [[PdAudioController alloc] initWithAudioUnit:pd_au_];
     PdAudioStatus status = [pd_ configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
     if (status == PdAudioOK) {

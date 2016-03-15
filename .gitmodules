@@ -1,3 +1,0 @@
-[submodule "libpd"]
-	path = libpd
-	url = git@github.com:nettoyeurny/libpd_link.git

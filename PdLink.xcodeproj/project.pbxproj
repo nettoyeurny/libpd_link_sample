@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580D82651C986708005C1E5B /* external in Resources */ = {isa = PBXBuildFile; fileRef = 580D82641C986708005C1E5B /* external */; };
+		580D82671C98671C005C1E5B /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 580D82661C98671B005C1E5B /* ios */; };
 		58A3EBFB1C80E9EE0083ACCF /* ping.pd in Resources */ = {isa = PBXBuildFile; fileRef = 58A3EBFA1C80E9EE0083ACCF /* ping.pd */; };
 		58C964481C80DD710031C7FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C964471C80DD710031C7FA /* main.m */; };
 		58C9644B1C80DD710031C7FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C9644A1C80DD710031C7FA /* AppDelegate.m */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		580D82641C986708005C1E5B /* external */ = {isa = PBXFileReference; lastKnownFileType = folder; name = external; path = pd_link/external; sourceTree = "<group>"; };
+		580D82661C98671B005C1E5B /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = pd_link/ios; sourceTree = "<group>"; };
 		58A3EBFA1C80E9EE0083ACCF /* ping.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ping.pd; sourceTree = "<group>"; };
 		58C964431C80DD710031C7FA /* PdLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PdLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C964471C80DD710031C7FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,9 +81,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		580D82621C9866D3005C1E5B /* PdLinkBridge */ = {
+			isa = PBXGroup;
+			children = (
+				580D82661C98671B005C1E5B /* ios */,
+				580D82641C986708005C1E5B /* external */,
+			);
+			name = PdLinkBridge;
+			sourceTree = "<group>";
+		};
 		58C9643A1C80DD710031C7FA = {
 			isa = PBXGroup;
 			children = (
+				580D82621C9866D3005C1E5B /* PdLinkBridge */,
 				58EA9ECF1C88CED1000004FE /* libABLLink.a */,
 				58EA9EC31C88CBA9000004FE /* libpd.xcodeproj */,
 				58C964691C80DEEA0031C7FA /* AudioToolbox.framework */,
@@ -212,7 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580D82671C98671C005C1E5B /* ios in Resources */,
 				58C964561C80DD710031C7FA /* LaunchScreen.storyboard in Resources */,
+				580D82651C986708005C1E5B /* external in Resources */,
 				58C964531C80DD710031C7FA /* Assets.xcassets in Resources */,
 				58C964511C80DD710031C7FA /* Main.storyboard in Resources */,
 				58A3EBFB1C80E9EE0083ACCF /* ping.pd in Resources */,
@@ -355,7 +371,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.noisepages.nettoyeur.PdLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "libpd/** ../LinkKit/include";
+				USER_HEADER_SEARCH_PATHS = "libpd/** ../LinkKit/include PdLinkBridge/ios";
 			};
 			name = Debug;
 		};
@@ -372,7 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.noisepages.nettoyeur.PdLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "libpd/** ../LinkKit/include";
+				USER_HEADER_SEARCH_PATHS = "libpd/** ../LinkKit/include PdLinkBridge/ios";
 			};
 			name = Release;
 		};

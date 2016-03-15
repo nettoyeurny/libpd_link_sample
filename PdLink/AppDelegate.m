@@ -7,12 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "PdLinkAudioUnit.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate {
+    PdLinkAudioUnit *pd_au_;
     PdAudioController *pd_;
     ABLLinkRef linkRef_;
 }
@@ -22,8 +24,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     linkRef_ = ABLLinkNew(120, 4);
-    [PdAudioUnit setLinkRef:linkRef_];
-    pd_ = [[PdAudioController alloc] init];
+    pd_au_ = [PdLinkAudioUnit initWithLinkRef:linkRef_];
+    pd_ = [[PdAudioController alloc] initWithAudioUnit:pd_au_];
     PdAudioStatus status = [pd_ configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
     if (status == PdAudioOK) {
         NSLog(@"Configured PdAudioController instance.");

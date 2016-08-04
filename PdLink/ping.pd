@@ -25,6 +25,7 @@
 #X obj 148 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 112 258 print downbeat;
+#X obj 234 134 print tempo;
 #X connect 0 0 1 1;
 #X connect 1 0 8 0;
 #X connect 3 0 1 0;
@@ -44,6 +45,7 @@
 #X connect 17 0 19 0;
 #X connect 17 1 6 1;
 #X connect 17 2 5 1;
+#X connect 17 3 24 0;
 #X connect 18 0 0 0;
 #X connect 19 0 4 0;
 #X connect 19 1 20 0;

@@ -1,6 +1,8 @@
 Link and libpd --- quick and dirty sample app
 =====
 
+**This version uses Ableton Link 2.0.0.**
+
 This sample app shows how to integrate the [Ableton Link external](https://github.com/nettoyeurny/pd_link_bridge) into iOS apps.
 
 Quick start: In the parent directory of your LinkKit directory (i.e., /some_path/LinkKit/..), say

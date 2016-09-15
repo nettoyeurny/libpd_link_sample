@@ -1,7 +1,7 @@
 Link and libpd --- quick and dirty sample app
 =====
 
-**This version uses Ableton Link 1.0.2.**
+**This version uses Ableton Link 2.0.0.**
 
 This sample app shows how to integrate the [Ableton Link external](https://github.com/nettoyeurny/pd_link_bridge) into iOS apps.
 

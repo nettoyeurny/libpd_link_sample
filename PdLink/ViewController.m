@@ -34,7 +34,7 @@ void sessionTempoCallback(double tempo, void *context) {
     dispatcher_ = [[PdDispatcher alloc] init];
     [PdBase setDelegate:dispatcher_];
     patch_ = [PdFile openFileNamed:@"ping.pd" path:[[NSBundle mainBundle] resourcePath]];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     ABLLinkRef linkRef = [appDelegate getLinkRef];
     linkSettings_ = [ABLLinkSettingsViewController instance:linkRef];
     ABLLinkSetSessionTempoCallback(linkRef, sessionTempoCallback, (__bridge void *)(self));
